@@ -1,17 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.css';
+import faker from 'faker';
+import DetailCard from './components/DetailCard';
+import CardDeck from 'react-bootstrap/CardDeck';
+
+const App = () => {
+  return (
+    <div className="container">
+        <h2>Related Articles</h2>
+        <p style={{ width: '40rem' }}>{faker.lorem.lines()}</p>
+        <CardDeck>
+          <DetailCard color="danger" date="12 Sep 2018" title="Love of learning, art keys to a great year for Gwen"
+            text={faker.lorem.paragraph()} />
+          <DetailCard color="info" date="28 Sep 2018" title="Curious mind leads the way for carer Jill"
+            text={faker.lorem.paragraph()} />
+          <DetailCard color="success" date="12 Sep 2018" title="Celebrating our volunteers"
+            text={faker.lorem.paragraph()} />
+        </CardDeck>
+    </div>
+  );
+};
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
