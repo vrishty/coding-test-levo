@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Website: https://pedantic-meitner-a341e8.netlify.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
